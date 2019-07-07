@@ -4,6 +4,15 @@
 
 Utilize 'npm install' no terminal para instalação
 
-## ver o projeto no navegador
+## Ver o projeto no navegador
 
 Utilize 'ng serve' o angular irá usbir o projeto na porta localhost:4200
+
+### descrição
+Prjeto feito em Angular 7, com as seguintes tecnologias:
+
+-CSS3
+-HTML5
+-Material Design
+-Responsivo
+-Firebase
