@@ -1,0 +1,33 @@
+body {
+    background: $cinza;
+    font-family: 'rawline';
+    color: $texto;
+    margin: 0;
+    padding-top: 65px;
+}
+
+.botao-padrao {
+    background: $cor-secundaria;
+    border: none;
+    border-radius: 5px;
+    color: $branco;
+    padding: 8px 20px;
+    min-width: 100px;
+}
+
+@media (max-width: 768px) {
+    .header-titulo{
+        h1 {
+            font-size: 25px!important;
+        }
+    }
+    .tabela-agenda {
+        .guarda-botao {
+            text-align: center!important;
+        }
+    }
+
+    .mat-cell {
+        font-size: 12px!important;
+    }
+}

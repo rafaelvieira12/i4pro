@@ -1,0 +1,65 @@
+
+.mat-table {
+    box-shadow: none;
+}
+
+.mat-form-field-underline .mat-form-field-ripple{
+    background-color: $cor-secundaria!important;
+}
+  
+
+// =======================MODAL
+.mat-dialog-container {
+    border-radius: 0 !important;
+    border: none;
+    padding: 0px !important;
+    overflow: hidden !important;
+  }
+  .modal-header {
+    padding: 20px !important;
+    margin: 0 !important;
+    border-bottom: 1px solid $cinza;
+    font-size: 16px !important;
+    font-weight: bold;
+    display: flex;
+
+    h2 {
+        float: left;
+        width: 90%;
+        margin: 0;
+        font-weight: 500;
+    }
+
+    .bt-fechar {
+        float: right;
+        color: $vermelho;
+        margin-top: 5px;
+        cursor: pointer;
+    }
+  }
+  .mat-dialog-content {
+    padding: 20px !important;
+    display: block !important;
+    margin: 0 !important;
+
+    mat-form-field {
+        width: 100%;
+    }
+  }
+  .mat-dialog-actions {
+    padding: 20px !important;
+    margin: 0 !important;
+    display: inline-block !important;
+    width: 100%;
+    border-top: 1px solid $cinza;
+  }
+  .mat-dialog-actions .footer-buttons {
+    
+    text-align: center;
+    button {
+      margin: 0;
+      display: inline-block !important;
+      margin-left: 10px;
+      min-width: 100px;      
+    }
+  }

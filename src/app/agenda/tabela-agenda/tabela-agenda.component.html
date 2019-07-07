@@ -1,0 +1,59 @@
+<div class="tabela-agenda" >
+  <div class="row guarda-acoes"> 
+    <div class="col-lg-9 col-md-9 col-sm-8 col-xs-12">
+      <mat-form-field>
+        <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Pesquisar">      
+      </mat-form-field>
+    </div>
+    <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12 guarda-botao">
+        <button class="botao-padrao" (click)="cadastrarModal()">Incluir cadastro</button>
+    </div>
+    
+  </div>  
+
+  <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+    <!-- Name Column -->
+    <ng-container matColumnDef="nome">
+        <th mat-header-cell *matHeaderCellDef> Nome </th>
+        <td mat-cell *matCellDef="let element"> {{element.nome}} </td>
+      </ng-container>
+
+    <!-- Celular -->
+    <ng-container matColumnDef="celular">
+      <th mat-header-cell *matHeaderCellDef> Celular </th>
+      <td mat-cell *matCellDef="let element"> {{element.celular | mask: '(99) 99999-9999'}} </td>
+    </ng-container>  
+
+    <!-- Telefone -->
+    <ng-container matColumnDef="telefone">
+      <th mat-header-cell *matHeaderCellDef> Telefone </th>
+      <td mat-cell *matCellDef="let element"> {{element.telefone | mask: '(99) 9999-9999'}} </td>
+    </ng-container>    
+
+    <!-- email -->
+    <ng-container matColumnDef="email">
+      <th mat-header-cell *matHeaderCellDef> E-mail </th>
+      <td mat-cell *matCellDef="let element"> {{element.email}} </td>
+    </ng-container>
+
+    <!-- Symbol Column -->
+    <ng-container matColumnDef="acoes">
+      <th mat-header-cell *matHeaderCellDef> Ações </th>
+      <td mat-cell *matCellDef="let element">
+        <mat-icon class="bt-editar" (click)="editarModal(element)">edit</mat-icon>
+        <mat-icon class="bt-excluir" (click)="excluirModal(element)">delete</mat-icon>
+      </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+
+  <mat-paginator *ngIf="tableComDados" [pageSizeOptions]="[5, 10, 25, 100]"></mat-paginator>
+  
+</div>
+
+<div class="semDados" *ngIf="!tableComDados">
+  <p>Listagem de contatos está vazia</p>
+</div>

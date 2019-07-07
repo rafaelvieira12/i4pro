@@ -1,0 +1,42 @@
+@import "../../../assets/css/cores.scss";
+
+.tabela-agenda{
+ 
+  .guarda-acoes {
+
+    .guarda-botao {
+      text-align: right;
+    }
+
+    button {
+      margin-top: 5px;
+      width: 170px;
+    }
+  }
+
+  table {
+    width: 100%;
+
+    mat-icon {
+      cursor: pointer;
+    }
+
+    .bt-excluir {
+      margin-left: 10px;
+      color: $vermelho;
+    }
+  }
+
+  .mat-form-field {
+    font-size: 14px;
+    width: 100%;
+  }
+  
+}
+
+.semDados {
+  width: 100%;
+  padding: 20px;
+  text-align: center;
+  font-size: 16px;
+}

@@ -1,0 +1,17 @@
+@import "../../assets/css/cores.scss";
+
+header {
+    background-color: $cor-principal;
+    border-bottom: 1px solid #e0dcd8;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+    width: 100%;
+    padding: 5px 0;
+
+    img {
+        max-height: 60px;
+    }
+
+}

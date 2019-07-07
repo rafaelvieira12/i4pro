@@ -1,0 +1,38 @@
+<div class="modal-editar-cadastrar">
+    <form [formGroup]="formEditar" (ngSubmit)="enviarDadosForm()" validate>
+      <div class="modal-header">
+        <h2 class="modal-title">{{ tituloModal }} Contato</h2>        
+        <mat-icon class="bt-fechar" (click)="fecharModal()">close</mat-icon>
+      </div>
+      <mat-dialog-content>
+        <div class="content-modal-editar">
+            <div>              
+              <mat-form-field>
+                <input matInput [(ngModel)]="nome" placeholder="Nome" type="text" formControlName="nome" />
+              </mat-form-field>
+            </div>
+            <div>              
+              <mat-form-field>
+                <input matInput [(ngModel)]="celular" placeholder="Celular" mask="(99) 99999-9999" minlength="11" type="text" formControlName="celular" />
+              </mat-form-field>
+            </div>
+            <div>              
+              <mat-form-field>
+                <input matInput [(ngModel)]="telefone" placeholder="Telefone" mask="(99) 9999-9999" type="text" formControlName="telefone" />
+              </mat-form-field>
+            </div>
+            <div>              
+              <mat-form-field>
+                <input matInput [(ngModel)]="email" placeholder="E-mail" type="text" formControlName="email" minlength="5" />
+              </mat-form-field>
+            </div>
+              
+        </div>
+      </mat-dialog-content>
+      <mat-dialog-actions>
+        <div class="footer-buttons">          
+          <button class="botao-padrao">SALVAR</button>
+        </div>
+      </mat-dialog-actions>
+    </form>
+  </div>
